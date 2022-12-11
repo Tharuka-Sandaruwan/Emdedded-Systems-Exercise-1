@@ -83,8 +83,9 @@ int main(void)
     
     while (1) 
     {
-		PORTD = 0b00000001;
-  84:	81 e0       	ldi	r24, 0x01	; 1
+
+	PORTD = 0b00010000;
+  84:	80 e1       	ldi	r24, 0x10	; 16
   86:	8b b9       	out	0x0b, r24	; 11
 	#else
 		//round up by default
@@ -101,8 +102,8 @@ int main(void)
   94:	e1 f7       	brne	.-8      	; 0x8e <main+0xe>
   96:	00 c0       	rjmp	.+0      	; 0x98 <main+0x18>
   98:	00 00       	nop
-		_delay_ms(100);
-		PORTD = 0b00000000;
+	_delay_ms(100);
+	PORTD = 0b00000000;
   9a:	1b b8       	out	0x0b, r1	; 11
   9c:	2f ef       	ldi	r18, 0xFF	; 255
   9e:	81 ee       	ldi	r24, 0xE1	; 225
@@ -113,9 +114,9 @@ int main(void)
   a8:	e1 f7       	brne	.-8      	; 0xa2 <main+0x22>
   aa:	00 c0       	rjmp	.+0      	; 0xac <main+0x2c>
   ac:	00 00       	nop
-		_delay_ms(100);
-		PORTD = 0b00000010;
-  ae:	82 e0       	ldi	r24, 0x02	; 2
+	_delay_ms(100);
+	PORTD = 0b00001000;
+  ae:	88 e0       	ldi	r24, 0x08	; 8
   b0:	8b b9       	out	0x0b, r24	; 11
   b2:	2f ef       	ldi	r18, 0xFF	; 255
   b4:	81 ee       	ldi	r24, 0xE1	; 225
@@ -126,8 +127,8 @@ int main(void)
   be:	e1 f7       	brne	.-8      	; 0xb8 <main+0x38>
   c0:	00 c0       	rjmp	.+0      	; 0xc2 <main+0x42>
   c2:	00 00       	nop
-		_delay_ms(100);
-		PORTD = 0b00000000;
+	_delay_ms(100);
+	PORTD = 0b00000000;
   c4:	1b b8       	out	0x0b, r1	; 11
   c6:	2f ef       	ldi	r18, 0xFF	; 255
   c8:	81 ee       	ldi	r24, 0xE1	; 225
@@ -138,8 +139,8 @@ int main(void)
   d2:	e1 f7       	brne	.-8      	; 0xcc <main+0x4c>
   d4:	00 c0       	rjmp	.+0      	; 0xd6 <main+0x56>
   d6:	00 00       	nop
-		_delay_ms(100);
-		PORTD = 0b00000100;
+	_delay_ms(100);
+	PORTD = 0b00000100;
   d8:	84 e0       	ldi	r24, 0x04	; 4
   da:	8b b9       	out	0x0b, r24	; 11
   dc:	2f ef       	ldi	r18, 0xFF	; 255
@@ -151,8 +152,8 @@ int main(void)
   e8:	e1 f7       	brne	.-8      	; 0xe2 <main+0x62>
   ea:	00 c0       	rjmp	.+0      	; 0xec <main+0x6c>
   ec:	00 00       	nop
-		_delay_ms(100);
-		PORTD = 0b00000000;
+	_delay_ms(100);
+	PORTD = 0b00000000;
   ee:	1b b8       	out	0x0b, r1	; 11
   f0:	2f ef       	ldi	r18, 0xFF	; 255
   f2:	81 ee       	ldi	r24, 0xE1	; 225
@@ -163,9 +164,9 @@ int main(void)
   fc:	e1 f7       	brne	.-8      	; 0xf6 <main+0x76>
   fe:	00 c0       	rjmp	.+0      	; 0x100 <main+0x80>
  100:	00 00       	nop
-		_delay_ms(100);
-		PORTD = 0b00001000;
- 102:	88 e0       	ldi	r24, 0x08	; 8
+	_delay_ms(100);
+	PORTD = 0b00000010;
+ 102:	82 e0       	ldi	r24, 0x02	; 2
  104:	8b b9       	out	0x0b, r24	; 11
  106:	2f ef       	ldi	r18, 0xFF	; 255
  108:	81 ee       	ldi	r24, 0xE1	; 225
@@ -176,8 +177,8 @@ int main(void)
  112:	e1 f7       	brne	.-8      	; 0x10c <main+0x8c>
  114:	00 c0       	rjmp	.+0      	; 0x116 <main+0x96>
  116:	00 00       	nop
-		_delay_ms(100);
-		PORTD = 0b00000000;
+	_delay_ms(100);
+	PORTD = 0b00000000;
  118:	1b b8       	out	0x0b, r1	; 11
  11a:	2f ef       	ldi	r18, 0xFF	; 255
  11c:	81 ee       	ldi	r24, 0xE1	; 225
@@ -188,9 +189,9 @@ int main(void)
  126:	e1 f7       	brne	.-8      	; 0x120 <main+0xa0>
  128:	00 c0       	rjmp	.+0      	; 0x12a <main+0xaa>
  12a:	00 00       	nop
-		_delay_ms(100);
-		PORTD = 0b00010000;
- 12c:	80 e1       	ldi	r24, 0x10	; 16
+	_delay_ms(100);
+	PORTD = 0b00000001;
+ 12c:	81 e0       	ldi	r24, 0x01	; 1
  12e:	8b b9       	out	0x0b, r24	; 11
  130:	2f ef       	ldi	r18, 0xFF	; 255
  132:	81 ee       	ldi	r24, 0xE1	; 225
@@ -201,8 +202,8 @@ int main(void)
  13c:	e1 f7       	brne	.-8      	; 0x136 <main+0xb6>
  13e:	00 c0       	rjmp	.+0      	; 0x140 <main+0xc0>
  140:	00 00       	nop
-		_delay_ms(100);
-		PORTD = 0b00000000;
+	_delay_ms(100);
+	PORTD = 0b00000000;
  142:	1b b8       	out	0x0b, r1	; 11
  144:	2f ef       	ldi	r18, 0xFF	; 255
  146:	81 ee       	ldi	r24, 0xE1	; 225
