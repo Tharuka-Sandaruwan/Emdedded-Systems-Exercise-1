@@ -11,24 +11,38 @@
 
 int main(void)
 {
-   DDRD = 0b11111000;
+   DDRD = 0b11111101;
    short cDelay = 100; //change delay here
    
     while (1) 
     {
+		
 		for (int i = 128 ; i>=8; i/=2)
 		{
-			PORTD = i;
+			PORTD = 4| i;
 			_delay_ms(cDelay);
 			PORTD = 0;	
 		}
-		
-		
-		for (int i = 16 ; i <= 64; i*=2)
+
+		for (int i = 128 ; i>=8; i/=2)
 		{
-			PORTD = i;
+			PORTD = 1| i;
 			_delay_ms(cDelay);
 			PORTD = 0;	
+		}
+
+		for (int i = 16 ; i <= 128; i*=2)
+		{
+			PORTD =  1|i;
+			_delay_ms(cDelay);
+			PORTD = 0;	
+		}
+
+		for (int i = 16 ; i <= 64; i*=2)
+		{
+			PORTD =  4|i;
+			_delay_ms(cDelay);
+			PORTD = 0;
 		}
     }
 	
@@ -36,5 +50,5 @@ int main(void)
 }
 
 /*
-avrdude.exe: 226 bytes of flash verified
+avrdude.exe: 330 bytes of flash verified
 */
