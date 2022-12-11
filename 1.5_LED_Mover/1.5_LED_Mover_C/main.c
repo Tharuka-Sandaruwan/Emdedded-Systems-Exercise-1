@@ -27,5 +27,6 @@ int main(void)
 		PORTD = 0b00000000;
 		
     }
+	return 0;
 }
 
