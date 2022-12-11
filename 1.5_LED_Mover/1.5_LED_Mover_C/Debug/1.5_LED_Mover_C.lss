@@ -99,15 +99,15 @@ int main(void)
 
 	__builtin_avr_delay_cycles(__ticks_dc);
   8c:	2f ef       	ldi	r18, 0xFF	; 255
-  8e:	31 ee       	ldi	r19, 0xE1	; 225
-  90:	44 e0       	ldi	r20, 0x04	; 4
+  8e:	30 e7       	ldi	r19, 0x70	; 112
+  90:	42 e0       	ldi	r20, 0x02	; 2
   92:	21 50       	subi	r18, 0x01	; 1
   94:	30 40       	sbci	r19, 0x00	; 0
   96:	40 40       	sbci	r20, 0x00	; 0
   98:	e1 f7       	brne	.-8      	; 0x92 <main+0x12>
   9a:	00 c0       	rjmp	.+0      	; 0x9c <main+0x1c>
   9c:	00 00       	nop
-			_delay_ms(100);
+			_delay_ms(50);
 			PORTD = 0;	
   9e:	1b b8       	out	0x0b, r1	; 11
 	neeed to remove led to upload the code*/

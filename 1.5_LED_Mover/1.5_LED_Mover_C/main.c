@@ -24,7 +24,7 @@ int main(void)
 		for (int i = 128 ; i>=8; i=i/2) //loop through the ports
 		{
 			PORTD = i;
-			_delay_ms(100);
+			_delay_ms(50);
 			PORTD = 0;	
 		}
 
