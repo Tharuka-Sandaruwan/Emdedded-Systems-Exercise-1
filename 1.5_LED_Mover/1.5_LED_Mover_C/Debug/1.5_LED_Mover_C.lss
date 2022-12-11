@@ -77,15 +77,15 @@ Disassembly of section .text:
 
 int main(void)
 {
-	DDRD = 0b00011111; //setting uno pin 0 -> 4 as outputs
-  80:	8f e1       	ldi	r24, 0x1F	; 31
+	DDRD = 0b11111000; //setting uno pin 0 -> 4 as outputs
+  80:	88 ef       	ldi	r24, 0xF8	; 248
   82:	8a b9       	out	0x0a, r24	; 10
     
     while (1) 
     {
 
-	PORTD = 0b00010000;
-  84:	80 e1       	ldi	r24, 0x10	; 16
+	PORTD = 0b10000000;
+  84:	80 e8       	ldi	r24, 0x80	; 128
   86:	8b b9       	out	0x0b, r24	; 11
 	#else
 		//round up by default
@@ -115,8 +115,8 @@ int main(void)
   aa:	00 c0       	rjmp	.+0      	; 0xac <main+0x2c>
   ac:	00 00       	nop
 	_delay_ms(100);
-	PORTD = 0b00001000;
-  ae:	88 e0       	ldi	r24, 0x08	; 8
+	PORTD = 0b01000000;
+  ae:	80 e4       	ldi	r24, 0x40	; 64
   b0:	8b b9       	out	0x0b, r24	; 11
   b2:	2f ef       	ldi	r18, 0xFF	; 255
   b4:	81 ee       	ldi	r24, 0xE1	; 225
@@ -140,8 +140,8 @@ int main(void)
   d4:	00 c0       	rjmp	.+0      	; 0xd6 <main+0x56>
   d6:	00 00       	nop
 	_delay_ms(100);
-	PORTD = 0b00000100;
-  d8:	84 e0       	ldi	r24, 0x04	; 4
+	PORTD = 0b00100000;
+  d8:	80 e2       	ldi	r24, 0x20	; 32
   da:	8b b9       	out	0x0b, r24	; 11
   dc:	2f ef       	ldi	r18, 0xFF	; 255
   de:	81 ee       	ldi	r24, 0xE1	; 225
@@ -165,8 +165,8 @@ int main(void)
   fe:	00 c0       	rjmp	.+0      	; 0x100 <main+0x80>
  100:	00 00       	nop
 	_delay_ms(100);
-	PORTD = 0b00000010;
- 102:	82 e0       	ldi	r24, 0x02	; 2
+	PORTD = 0b00010000;
+ 102:	80 e1       	ldi	r24, 0x10	; 16
  104:	8b b9       	out	0x0b, r24	; 11
  106:	2f ef       	ldi	r18, 0xFF	; 255
  108:	81 ee       	ldi	r24, 0xE1	; 225
@@ -190,8 +190,8 @@ int main(void)
  128:	00 c0       	rjmp	.+0      	; 0x12a <main+0xaa>
  12a:	00 00       	nop
 	_delay_ms(100);
-	PORTD = 0b00000001;
- 12c:	81 e0       	ldi	r24, 0x01	; 1
+	PORTD = 0b00001000;
+ 12c:	88 e0       	ldi	r24, 0x08	; 8
  12e:	8b b9       	out	0x0b, r24	; 11
  130:	2f ef       	ldi	r18, 0xFF	; 255
  132:	81 ee       	ldi	r24, 0xE1	; 225

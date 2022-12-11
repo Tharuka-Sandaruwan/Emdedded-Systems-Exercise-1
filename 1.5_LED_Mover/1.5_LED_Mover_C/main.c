@@ -11,28 +11,28 @@
 
 int main(void)
 {
-	DDRD = 0b00011111; //setting uno pin 0 -> 4 as outputs
+	DDRD = 0b11111000; //setting uno pin 0 -> 4 as outputs
     
     while (1) 
     {
 
+	PORTD = 0b10000000;
+	_delay_ms(100);
+	PORTD = 0b00000000;
+	_delay_ms(100);
+	PORTD = 0b01000000;
+	_delay_ms(100);
+	PORTD = 0b00000000;
+	_delay_ms(100);
+	PORTD = 0b00100000;
+	_delay_ms(100);
+	PORTD = 0b00000000;
+	_delay_ms(100);
 	PORTD = 0b00010000;
 	_delay_ms(100);
 	PORTD = 0b00000000;
 	_delay_ms(100);
 	PORTD = 0b00001000;
-	_delay_ms(100);
-	PORTD = 0b00000000;
-	_delay_ms(100);
-	PORTD = 0b00000100;
-	_delay_ms(100);
-	PORTD = 0b00000000;
-	_delay_ms(100);
-	PORTD = 0b00000010;
-	_delay_ms(100);
-	PORTD = 0b00000000;
-	_delay_ms(100);
-	PORTD = 0b00000001;
 	_delay_ms(100);
 	PORTD = 0b00000000;
 	_delay_ms(100);
