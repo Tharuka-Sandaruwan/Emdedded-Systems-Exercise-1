@@ -85,10 +85,14 @@ int main(void)
     while (1)  // infinite loop
     {
 		
-		for (int i = 128 ; i>=8; i=i/2) //loop through the ports
+		for (int i = 128 ; i>=8; i/=2) //loop through the ports
   84:	80 e8       	ldi	r24, 0x80	; 128
   86:	90 e0       	ldi	r25, 0x00	; 0
   88:	13 c0       	rjmp	.+38     	; 0xb0 <main+0x30>
+		0b00100000 = 32
+		
+		*/
+		
 		{
 			PORTD = i;
   8a:	8b b9       	out	0x0b, r24	; 11
@@ -115,7 +119,7 @@ int main(void)
     while (1)  // infinite loop
     {
 		
-		for (int i = 128 ; i>=8; i=i/2) //loop through the ports
+		for (int i = 128 ; i>=8; i/=2) //loop through the ports
   a0:	9c 01       	movw	r18, r24
   a2:	99 23       	and	r25, r25
   a4:	14 f4       	brge	.+4      	; 0xaa <main+0x2a>

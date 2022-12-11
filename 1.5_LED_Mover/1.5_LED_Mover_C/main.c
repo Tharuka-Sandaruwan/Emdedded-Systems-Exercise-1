@@ -21,7 +21,14 @@ int main(void)
     while (1)  // infinite loop
     {
 		
-		for (int i = 128 ; i>=8; i=i/2) //loop through the ports
+		for (int i = 128 ; i>=8; i/=2) //loop through the ports
+		/*
+		0b10000000 = 128
+		0b01000000 = 64
+		0b00100000 = 32
+		
+		*/
+		
 		{
 			PORTD = i;
 			_delay_ms(50);
