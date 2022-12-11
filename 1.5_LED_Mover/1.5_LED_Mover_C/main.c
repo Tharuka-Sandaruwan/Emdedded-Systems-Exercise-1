@@ -40,6 +40,9 @@ int main(void)
 	return 0;
 }
 
+/*
 
+avrdude.exe: 188 bytes of flash verified
+*/
 	
 	
