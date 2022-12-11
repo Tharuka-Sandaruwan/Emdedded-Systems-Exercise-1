@@ -80,7 +80,8 @@ int main(void)
    DDRD = 0b11111000;
   80:	88 ef       	ldi	r24, 0xF8	; 248
   82:	8a b9       	out	0x0a, r24	; 10
-   short cDelay = 50;
+   short cDelay = 100; //change delay here
+   
     while (1) 
     {
 		for (int i = 128 ; i>=8; i/=2)
@@ -97,8 +98,8 @@ int main(void)
 
 	__builtin_avr_delay_cycles(__ticks_dc);
   8c:	2f ef       	ldi	r18, 0xFF	; 255
-  8e:	30 e7       	ldi	r19, 0x70	; 112
-  90:	42 e0       	ldi	r20, 0x02	; 2
+  8e:	31 ee       	ldi	r19, 0xE1	; 225
+  90:	44 e0       	ldi	r20, 0x04	; 4
   92:	21 50       	subi	r18, 0x01	; 1
   94:	30 40       	sbci	r19, 0x00	; 0
   96:	40 40       	sbci	r20, 0x00	; 0
@@ -108,9 +109,9 @@ int main(void)
 			_delay_ms(cDelay);
 			PORTD = 0;	
   9e:	1b b8       	out	0x0b, r1	; 11
-{
    DDRD = 0b11111000;
-   short cDelay = 50;
+   short cDelay = 100; //change delay here
+   
     while (1) 
     {
 		for (int i = 128 ; i>=8; i/=2)
@@ -136,8 +137,8 @@ int main(void)
 			PORTD = i;
   bc:	8b b9       	out	0x0b, r24	; 11
   be:	2f ef       	ldi	r18, 0xFF	; 255
-  c0:	30 e7       	ldi	r19, 0x70	; 112
-  c2:	42 e0       	ldi	r20, 0x02	; 2
+  c0:	31 ee       	ldi	r19, 0xE1	; 225
+  c2:	44 e0       	ldi	r20, 0x04	; 4
   c4:	21 50       	subi	r18, 0x01	; 1
   c6:	30 40       	sbci	r19, 0x00	; 0
   c8:	40 40       	sbci	r20, 0x00	; 0

@@ -12,7 +12,8 @@
 int main(void)
 {
    DDRD = 0b11111000;
-   short cDelay = 100;
+   short cDelay = 100; //change delay here
+   
     while (1) 
     {
 		for (int i = 128 ; i>=8; i/=2)
@@ -34,3 +35,6 @@ int main(void)
 	return 0;
 }
 
+/*
+avrdude.exe: 226 bytes of flash verified
+*/
