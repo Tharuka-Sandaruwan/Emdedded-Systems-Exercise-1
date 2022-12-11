@@ -11,14 +11,18 @@
 
 int main(void)
 {
-	DDRD = 0b11111000; //setting uno pin 0 -> 4 as outputs
-    
-    while (1) 
+	DDRD = 0b11111000; //setting uno pin 7 -> 3 as outputs
+    /*
+	omitted pin 0 and 1 as cannot upload code
+	when those pins are connected to led.
+	neeed to remove led to upload the code*/
+	
+    while (1)  // infinite loop
     {
 
-	PORTD = 0b10000000;
-	_delay_ms(20);
-	PORTD = 0b00000000;
+	PORTD = 0b10000000; // setting pin 7 high
+	_delay_ms(20);  // wait for 20ms
+	PORTD = 0b00000000; //setting all pins low
 	_delay_ms(20);
 	PORTD = 0b01000000;
 	_delay_ms(20);
