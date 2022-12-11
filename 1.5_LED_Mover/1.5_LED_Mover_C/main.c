@@ -11,9 +11,21 @@
 
 int main(void)
 {
+	DDRD = 0b00011111; //setting uno pin 0 -> 4 as outputs
     
     while (1) 
     {
+		PORTD = 0b00000001;
+		PORTD = 0b00000000;
+		PORTD = 0b00000010;
+		PORTD = 0b00000000;
+		PORTD = 0b00000100;
+		PORTD = 0b00000000;
+		PORTD = 0b00001000;
+		PORTD = 0b00000000;
+		PORTD = 0b00010000;
+		PORTD = 0b00000000;
+		
     }
 }
 
