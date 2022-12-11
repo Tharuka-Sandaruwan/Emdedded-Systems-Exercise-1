@@ -17,25 +17,25 @@ int main(void)
     {
 
 	PORTD = 0b10000000;
-	_delay_ms(100);
+	_delay_ms(20);
 	PORTD = 0b00000000;
-	_delay_ms(100);
+	_delay_ms(20);
 	PORTD = 0b01000000;
-	_delay_ms(100);
+	_delay_ms(20);
 	PORTD = 0b00000000;
-	_delay_ms(100);
+	_delay_ms(20);
 	PORTD = 0b00100000;
-	_delay_ms(100);
+	_delay_ms(20);
 	PORTD = 0b00000000;
-	_delay_ms(100);
+	_delay_ms(20);
 	PORTD = 0b00010000;
-	_delay_ms(100);
+	_delay_ms(20);
 	PORTD = 0b00000000;
-	_delay_ms(100);
+	_delay_ms(20);
 	PORTD = 0b00001000;
-	_delay_ms(100);
+	_delay_ms(20);
 	PORTD = 0b00000000;
-	_delay_ms(100);
+	_delay_ms(20);
 		
     }
 	return 0;
